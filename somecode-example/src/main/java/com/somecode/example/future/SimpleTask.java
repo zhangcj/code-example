@@ -1,4 +1,4 @@
-package com.somecode.example.code;
+package com.somecode.example.future;
 
 /**
  * Created by Administrator on 2017/5/3.
@@ -11,7 +11,7 @@ public class SimpleTask implements Task {
         System.out.println("子线程获取传入参数："+param+"，执行一个耗时操作...");
 
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
