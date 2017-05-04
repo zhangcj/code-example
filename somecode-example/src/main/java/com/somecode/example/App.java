@@ -52,41 +52,43 @@ public class App
 //        }
 
 
-        BlockingQueue<Data> queue = new LinkedBlockingQueue<Data>(10);
+//        BlockingQueue<Data> queue = new LinkedBlockingQueue<Data>(10);
+//
+//        //生产者
+//        Provider p1 = new Provider(queue);
+//        Provider p2 = new Provider(queue);
+//        Provider p3 = new Provider(queue);
+//
+//        //消费者
+//        Consumer c1 = new Consumer(queue);
+//        Consumer c2 = new Consumer(queue);
+//        Consumer c3 = new Consumer(queue);
+//
+//        //缓存线程池，可以创建无穷大的线程
+//        ExecutorService pool = Executors.newCachedThreadPool();
+//        pool.execute(p1);
+//        pool.execute(p2);
+//        pool.execute(p3);
+//        pool.execute(c1);
+//        pool.execute(c2);
+//        pool.execute(c3);
+//
+//        try {
+//            Thread.sleep(1000);
+//        }catch (InterruptedException e){
+//            e.printStackTrace();
+//        }
+//
+//        p1.stop();
+//        p2.stop();
+//        p3.stop();
+//
+//        try {
+//            Thread.sleep(5000);
+//        }catch (InterruptedException e){
+//            e.printStackTrace();
+//        }
 
-        //生产者
-        Provider p1 = new Provider(queue);
-        Provider p2 = new Provider(queue);
-        Provider p3 = new Provider(queue);
 
-        //消费者
-        Consumer c1 = new Consumer(queue);
-        Consumer c2 = new Consumer(queue);
-        Consumer c3 = new Consumer(queue);
-
-        //缓存线程池，可以创建无穷大的线程
-        ExecutorService pool = Executors.newCachedThreadPool();
-        pool.execute(p1);
-        pool.execute(p2);
-        pool.execute(p3);
-        pool.execute(c1);
-        pool.execute(c2);
-        pool.execute(c3);
-
-        try {
-            Thread.sleep(1000);
-        }catch (InterruptedException e){
-            e.printStackTrace();
-        }
-
-        p1.stop();
-        p2.stop();
-        p3.stop();
-
-        try {
-            Thread.sleep(5000);
-        }catch (InterruptedException e){
-            e.printStackTrace();
-        }
     }
 }
